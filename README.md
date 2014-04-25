@@ -1,4 +1,4 @@
-SCCMSoftwareUpdateGroupPS
+SCCMSoftwareUpdatesGroupPS
 ====================
 PowerShell Script for easier management of Windows Updates into Groups on System Center Configuration Manager 2012
 prerequisites are:
