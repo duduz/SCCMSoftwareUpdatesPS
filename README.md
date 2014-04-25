@@ -2,9 +2,9 @@ SCCMSoftwareUpdateGroupPS
 ====================
 PowerShell Script for easier management of Windows Updates into Groups on System Center Configuration Manager 2012
 prerequisites are:
-PowerShell 3
-Microsoft System Center Configuration Manager 2012 SP1 and up
-**SCCM 2012 Module can only be loaded into a x86 instance of PowerShell**
+- PowerShell 3
+- Microsoft System Center Configuration Manager 2012 SP1 and up
+- **SCCM 2012 Module can only be loaded into a x86 instance of PowerShell**
 
 A bit more..
 -----------------
