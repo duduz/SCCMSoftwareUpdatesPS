@@ -63,13 +63,13 @@ If($Scan) {
 If (!$UpdatesFile) { 
     Write-Host "$NULL"
     Write-Host "A path to gather a list of updates from must be specifed using -UpdatesFile"
-    Write-Host "Syntax usage is: SCCMUpdatesV1.ps1 -UpdatesFile ""C:\temp\list1.txt"" -SUG ""Software Update Group 5"" -Logfile ""C:\Temp\Logfile.txt"""
+    Write-Host "Syntax usage is: SCCMSoftwareUpdateGroup.ps1 -UpdatesFile ""C:\temp\list1.txt"" -SUG ""Software Update Group 5"" -Logfile ""C:\Temp\Logfile.txt"""
     Exit
 }
 If (($UpdatesFile) -and (!$SUG)) {
     Write-Host "$NULL"
     Write-Host "Please provide a Software Update Group Name using -SUG"
-    Write-Host "Syntax usage is: SCCMUpdatesV1.ps1 -UpdatesFile ""C:\temp\list1.txt"" -SUG ""Software Update Group 5"" -Logfile ""C:\Temp\Logfile.txt"""
+    Write-Host "Syntax usage is: SCCMSoftwareUpdateGroup.ps1 -UpdatesFile ""C:\temp\list1.txt"" -SUG ""Software Update Group 5"" -Logfile ""C:\Temp\Logfile.txt"""
     Exit
 }
 Else {  
