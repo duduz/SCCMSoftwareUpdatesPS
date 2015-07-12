@@ -39,11 +39,6 @@ If (-not (Get-Module ConfigurationManager)) {
     Set-Location "$($CMPSDrive):"
 }
 
-
-#$Updates = Get-Content C:\Temp\updates.txt
-#$LogFile = "C:\Temp\PSUpdates.log"
-#$SUG = "Global Updates 04"
-
 If($Scan) { 
     Write-Host "$NULL"
     Write-Host "Searching for Updates containing the following string: $Scan"
@@ -77,6 +72,7 @@ Else {
         $Updates = Get-Content $UpdatesFile | ? {$_.trim() -ne "" }
         foreach ($Update in $Updates) {
         If ($Logfile) {
+            Add-CMSoftwareUpdateToGroup -SoftwareUpdateGroupName $SUG -SoftwareUpdateName *$Update* -ErrorAction SilentlyContinue
                 If ($?) {
             Write-Host -ForegroundColor "Green" -BackgroundColor DarkGreen KB$Update added sucessfully
             Write-Output "[OK] KB$Update added sucessfully" | Out-File -append -filepath $Logfile }
